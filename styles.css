@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    margin: 0;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .envelope {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #fce4e4;
+    border: 5px solid #e1cece;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0d72ea;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 0; /* Coloca los corazones en la parte superior del sobre */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url('67Pg.gif'); /* Assuming you have a heart image */
+    background-size: cover;
+    top: 23%;
+  }
+  
+  .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+    color: #020202;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .heart1 {
+    color: red;
+    font-size: 2em;
+    position: absolute;
+    animation: heart 2s linear infinite;
+  }
+  
+  @keyframes heart {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 22px 20px 22px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 9px;
+    border-radius: 35px;
+    transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+    border-color 400ms ease-in-out,
+    background-color 400ms ease-in-out;
+    word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+  button:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+  }
+  
+  .filled,
+  .empty {
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+  button:hover .empty {
+    opacity: 0;
+  }
+  
+  button:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+
+  .frame {
+    position: absolute;
+    left: -55px; /* Ajusta esta propiedad para mover el frame más a la izquierda */
+    top: 182px; /* Ajusta esta propiedad para mover el frame más abajo */
+    width: 326px; /* Ancho del frame */
+    height: 148px; /* Alto del frame */
+    background-color: #fce4e4; /* Color de fondo del frame */
+    border: 2px solid #fff; /* Borde del frame */
+    padding: 10px; /* Espacio interno del frame */
+    box-shadow: 0 0 10px #0d72ea; /* Sombra del frame */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*Echo por prograae para mas repositorios https://github.com/TGTUN?tab=repositories*/
